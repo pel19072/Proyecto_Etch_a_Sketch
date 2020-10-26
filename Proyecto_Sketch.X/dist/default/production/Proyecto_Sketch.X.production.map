@@ -1,0 +1,142 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Sat Oct 24 19:17:30 2020
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                 RES_VECT       code   0x000000    program   0x000002
+                   .cinit    romdata   0x000001    program   0x000004
+               ISR_VECTOR       code   0x000004    program   0x0000ca
+                MAIN_PROG       code   0x000100    program   0x000142
+.config_2007_BUILD/DEFAULT/PRODUCTION/DIBUJO.       code   0x002007    program   0x000002
+.config_2008_BUILD/DEFAULT/PRODUCTION/DIBUJO.       code   0x002008    program   0x000002
+                  GPR_VAR      udata   0x000020       data   0x00000e
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000002      
+                            0x000004    0x000068      
+                            0x000100    0x0001a0      
+                            0x002007    0x002008      
+            267 out of 8455 program addresses used, program memory utilization is 3%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     ADCX   0x000022    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     ADCY   0x000029    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+              BANDERA_ADC   0x000020    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               BANDERA_RX   0x00004c    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+           BANDERA_TIMER0   0x000015    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+           BANDERA_TIMER2   0x00001c    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               BANDERA_TX   0x000030    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     COMA   0x000040    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+        CONFIGURACION_ADC   0x000175    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+       CONFIGURACION_ADCX   0x000182    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+       CONFIGURACION_ADCY   0x000186    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+       CONFIGURACION_BASE   0x000136    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+CONFIGURACION_INTERRUPCION   0x000167    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+         CONFIGURACION_RX   0x00019b    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+     CONFIGURACION_TIMER0   0x00015a    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+     CONFIGURACION_TIMER2   0x000162    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+    CONFIGURACION_TX_9600   0x00018a    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    COORX   0x00003c    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    COORY   0x000044    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                       CX   0x00010e    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                       CY   0x00011d    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                  DISPLAY   0x000108    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    ENTER   0x000048    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                      ISR   0x000008    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     LOOP   0x000107    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 NIB_SEPX   0x00012c    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 NIB_SEPY   0x000131    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     OP0X   0x000110    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     OP0Y   0x00011f    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     OP1X   0x000116    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     OP1Y   0x000125    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                      POP   0x000010    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     PUSH   0x000004    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                      RCX   0x00004e    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                      RCY   0x000052    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    SETUP   0x000100    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    START   0x000100    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    TABLA   0x000057    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+            COMUNICACIONX   0x000023       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+            COMUNICACIONY   0x000024       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               DISPLAY_HX   0x000025       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               DISPLAY_HY   0x000027       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               DISPLAY_LX   0x000026       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               DISPLAY_LY   0x000028       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     FLAG   0x000022       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 FLAG_ADC   0x00002c       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                  FLAG_RC   0x00002d       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 ROTACION   0x00002b       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+              STATUS_TEMP   0x000021       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 VAR_ADCX   0x000029       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 VAR_ADCY   0x00002a       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                   W_TEMP   0x000020       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     PUSH   0x000004    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                      ISR   0x000008    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                      POP   0x000010    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+           BANDERA_TIMER0   0x000015    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+           BANDERA_TIMER2   0x00001c    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+              BANDERA_ADC   0x000020    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     ADCX   0x000022    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     ADCY   0x000029    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               BANDERA_TX   0x000030    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    COORX   0x00003c    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     COMA   0x000040    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    COORY   0x000044    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    ENTER   0x000048    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               BANDERA_RX   0x00004c    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                      RCX   0x00004e    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                      RCY   0x000052    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    TABLA   0x000057    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    SETUP   0x000100    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                    START   0x000100    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     LOOP   0x000107    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                  DISPLAY   0x000108    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                       CX   0x00010e    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     OP0X   0x000110    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     OP1X   0x000116    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                       CY   0x00011d    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     OP0Y   0x00011f    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     OP1Y   0x000125    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 NIB_SEPX   0x00012c    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 NIB_SEPY   0x000131    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+       CONFIGURACION_BASE   0x000136    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+     CONFIGURACION_TIMER0   0x00015a    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+     CONFIGURACION_TIMER2   0x000162    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+CONFIGURACION_INTERRUPCION   0x000167    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+        CONFIGURACION_ADC   0x000175    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+       CONFIGURACION_ADCX   0x000182    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+       CONFIGURACION_ADCY   0x000186    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+    CONFIGURACION_TX_9600   0x00018a    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+         CONFIGURACION_RX   0x00019b    program     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                   W_TEMP   0x000020       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+              STATUS_TEMP   0x000021       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                     FLAG   0x000022       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+            COMUNICACIONX   0x000023       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+            COMUNICACIONY   0x000024       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               DISPLAY_HX   0x000025       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               DISPLAY_LX   0x000026       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               DISPLAY_HY   0x000027       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+               DISPLAY_LY   0x000028       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 VAR_ADCX   0x000029       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 VAR_ADCY   0x00002a       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 ROTACION   0x00002b       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                 FLAG_ADC   0x00002c       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+                  FLAG_RC   0x00002d       data     static E:\UVG\Semestre 4\Micros\Proyecto_Sketch.X\Dibujo.asm
+
+
