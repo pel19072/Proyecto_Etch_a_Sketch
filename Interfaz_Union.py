@@ -51,9 +51,9 @@ def hilo_cordenadas():
     ser = serial.Serial(port='COM4',baudrate=9600, parity=serial.PARITY_NONE, stopbits=serial.STOPBITS_ONE,bytesize=serial.EIGHTBITS, timeout=0)
     while (1) :
         try :
-            coor1 = tx.escritura(ser).split(',')
+            coor1 = tx.escritura(ser)
             cor_x = int(coor1[0])
-            cor_y = int(coor1[1])
+            cor_y = int(coor1[2])
             dx = 0
             dy = 0
 

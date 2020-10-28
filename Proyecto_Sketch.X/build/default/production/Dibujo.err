@@ -1,68 +1,61 @@
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 26 : Found label after column 1. (W_TEMP)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 27 : Found label after column 1. (STATUS_TEMP)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 28 : Found label after column 1. (FLAG)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 29 : Found label after column 1. (COMUNICACIONX)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 30 : Found label after column 1. (COMUNICACIONY)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 31 : Found label after column 1. (DISPLAY_HX)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 32 : Found label after column 1. (DISPLAY_LX)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 33 : Found label after column 1. (DISPLAY_HY)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 34 : Found label after column 1. (DISPLAY_LY)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 35 : Found label after column 1. (VAR_ADCX)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 36 : Found label after column 1. (VAR_ADCY)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 37 : Found label after column 1. (ROTACION)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 38 : Found label after column 1. (FLAG_ADC)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 39 : Found label after column 1. (FLAG_RC)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 76 : Found opcode in column 1. (RETFIE)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 85 : Found opcode in column 1. (RETURN)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 91 : Found opcode in column 1. (RETURN)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 96 : Found label after column 1. (ADCX)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 104 : Found label after column 1. (ADCY)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 127 : Found label after column 1. (COORX)
-Message[305] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 130 : Using default destination of 1 (file).
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 133 : Found label after column 1. (COMA)
-Message[305] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 136 : Using default destination of 1 (file).
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 139 : Found label after column 1. (COORY)
-Message[305] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 142 : Using default destination of 1 (file).
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 145 : Found label after column 1. (ENTER)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 154 : Found label after column 1. (RCX)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 159 : Found label after column 1. (RCY)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 164 : Found opcode in column 1. (RETURN)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 223 : Found label after column 1. (CX)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 226 : Found label after column 1. (OP0X)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 233 : Found label after column 1. (OP1X)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 241 : Found label after column 1. (CY)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 244 : Found label after column 1. (OP0Y)
-Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 251 : Found label after column 1. (OP1Y)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 269 : Found opcode in column 1. (RETURN)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 275 : Found opcode in column 1. (RETURN)
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 290 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 291 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 292 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 293 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 297 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 299 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 300 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 301 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 303 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 318 : Found opcode in column 1. (RETURN)
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 324 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 326 : Found opcode in column 1. (RETURN)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 332 : Found opcode in column 1. (RETURN)
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 336 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 337 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 338 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 342 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 347 : Found opcode in column 1. (RETURN)
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 351 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 361 : Found opcode in column 1. (RETURN)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 366 : Found opcode in column 1. (RETURN)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 371 : Found opcode in column 1. (RETURN)
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 375 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 376 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 377 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 380 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 384 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 385 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 386 : Register in operand not in bank 0.  Ensure that bank bits are correct.
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 388 : Found opcode in column 1. (RETURN)
-Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_SKETCH.X\DIBUJO.ASM 395 : Found opcode in column 1. (RETURN)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 26 : Found label after column 1. (W_TEMP)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 27 : Found label after column 1. (STATUS_TEMP)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 28 : Found label after column 1. (FLAG)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 29 : Found label after column 1. (X)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 30 : Found label after column 1. (Y)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 31 : Found label after column 1. (XH)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 32 : Found label after column 1. (YH)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 33 : Found label after column 1. (XL)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 34 : Found label after column 1. (YL)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 35 : Found label after column 1. (DISPLAY_HX)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 36 : Found label after column 1. (DISPLAY_LX)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 37 : Found label after column 1. (DISPLAY_HY)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 38 : Found label after column 1. (DISPLAY_LY)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 39 : Found label after column 1. (RXB0)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 40 : Found label after column 1. (RXB1)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 41 : Found label after column 1. (RXB2)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 42 : Found label after column 1. (RXB3)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 43 : Found label after column 1. (RXB4)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 44 : Found label after column 1. (RXB5)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 45 : Found label after column 1. (CUENTARX)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 46 : Found label after column 1. (CONT1)
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 79 : Found opcode in column 1. (RETFIE)
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 86 : Found opcode in column 1. (RETURN)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 113 : Found label after column 1. (VERIFICACION)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 143 : Found label after column 1. (ERRONEO)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 233 : Found label after column 1. (CX)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 236 : Found label after column 1. (OP0X)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 243 : Found label after column 1. (OP1X)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 251 : Found label after column 1. (CY)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 254 : Found label after column 1. (OP0Y)
+Warning[207] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 261 : Found label after column 1. (OP1Y)
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 310 : Found opcode in column 1. (RETURN)
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 316 : Found opcode in column 1. (RETURN)
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 361 : Found opcode in column 1. (RETURN)
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 376 : Found opcode in column 1. (RETURN)
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 391 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 392 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 393 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 394 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 398 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 400 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 401 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 402 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 404 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 406 : Found opcode in column 1. (RETURN)
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 412 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 414 : Found opcode in column 1. (RETURN)
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 418 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 425 : Found opcode in column 1. (RETURN)
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 429 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 439 : Found opcode in column 1. (RETURN)
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 443 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 444 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 445 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 448 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 452 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 453 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 454 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 456 : Found opcode in column 1. (RETURN)
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 463 : Found opcode in column 1. (RETURN)
+Warning[203] E:\UVG\SEMESTRE 4\MICROS\PROYECTO_ETCH_A_SKETCH\PROYECTO_SKETCH.X\DIBUJO.ASM 472 : Found opcode in column 1. (RETURN)

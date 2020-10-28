@@ -26,17 +26,24 @@ GPR_VAR			UDATA
     W_TEMP		RES	    1	; PARA GUARDAR INFO MIENTRAS SE EJECUTA LA INTERRUPCIÓN
     STATUS_TEMP		RES	    1
     FLAG		RES	    1	; PARA CAMBIAR DE DISPLAY
-    COMUNICACIONX	RES	    1	; CONEXION ENTRE TX Y RX
-    COMUNICACIONY	RES	    1	; CONEXION ENTRE TX Y RX
+    X			RES	    1	; CONEXION ENTRE TX Y RX
+    Y			RES	    1	; CONEXION ENTRE TX Y RX
+    XH			RES	    1	; CONEXION ENTRE TX Y RX
+    YH			RES	    1	; CONEXION ENTRE TX Y RX
+    XL			RES	    1	; CONEXION ENTRE TX Y RX
+    YL			RES	    1	; CONEXION ENTRE TX Y RX
     DISPLAY_HX		RES	    1	; VARIABLE PARA COLCAR MI DECENA DE LA COORDENADA EN X
     DISPLAY_LX		RES	    1	; VARIABLE PARA COLCAR MI UNIDAD DE LA COORDENADA EN X
     DISPLAY_HY		RES	    1	; VARIABLE PARA COLCAR MI DECENA DE LA COORDENADA EN Y
     DISPLAY_LY		RES	    1	; VARIABLE PARA COLCAR MI UNIDAD DE LA COORDENADA EN Y
-    VAR_ADCX		RES	    1	; VARIABLE PARA GUARDAR LA LECTURA DEL EJE X DEL POT
-    VAR_ADCY		RES	    1	; VARIABLE PARA GUARDAR LA LECTURA DEL EJE Y DEL POT
-    ROTACION		RES	    1	; VARIABLE PARA INDICAR SI MANDAR COORDENADA EN X, Y, UNA COMA O UN ENTER
-    FLAG_ADC		RES	    1	; PARA MULTIPLEXACIÓN DE LOS CANALES ANALÓGICOS
-    FLAG_RC		RES	    1	; PARA LA MULTIPLEXACIÓN DE LA RECEPCIÓN
+    RXB0		RES	    1	; 
+    RXB1		RES	    1	; 
+    RXB2		RES	    1	; 
+    RXB3		RES	    1	; 
+    RXB4		RES	    1	; 
+    RXB5		RES	    1	; 
+    CUENTARX		RES	    1	; 
+    CONT1		RES	    1	; 
 		
 
 ;*******************************************************************************
@@ -59,12 +66,8 @@ PUSH:			    ; PUSHEA LOS DATOS DE STATUS Y W A UNA VARIABLE TEMPORAL EN CASO SE 
     MOVWF   STATUS_TEMP
 
 ISR:
-    BTFSC   PIR1, ADIF	    ; CÓDIGO PARA SABER DE PARTE DE QUÉ INTERRUPCIÓN SE REALIZÓ
-    CALL    BANDERA_ADC
     BTFSC   INTCON, T0IF
-    CALL    BANDERA_TIMER0
-    BTFSC   PIR1, TMR2IF
-    CALL    BANDERA_TIMER2    
+    CALL    BANDERA_TIMER0   
     BTFSC   PIR1, RCIF
     CALL    BANDERA_RX
         
@@ -79,89 +82,67 @@ BANDERA_TIMER0:
     MOVLW   .248	    ; DELAY PARA 2ms --> 248 / DELAY PARA 10ms --> 216
     MOVWF   TMR0  
     CALL    DISPLAY	    ; EN ESTE TIMER SE MUXEAN LOS DISPLAYS 
-    CALL    NIB_SEPX	    ; Y SE COLOCAN SUS VALORES DE LAS LECTURAS DEL RX
-    CALL    NIB_SEPY
     BCF	    INTCON, T0IF      
 RETURN 
-    
-BANDERA_TIMER2:    
-    BTFSC   PIR1, TXIF	    ; SE COLOCA EL TX DENTRO DEL TIMER2 PARA DARLE UN DELAY
-    CALL    BANDERA_TX	    ; Y QUE LE DE TIEMPO A LA PC A LEER LOS DATOS ENVIADOS
-    BCF	    PIR1, TMR2IF
-RETURN    
-    
-BANDERA_ADC:
-    BTFSC   FLAG_ADC, 0
-    GOTO    ADCY
-    ADCX:
-	MOVFW   ADRESH	    ; MANDA LA CODIFICACION DIGITAL DE MI SEÑAL ANALOGICA A LA VARIABLE EN X
-	MOVWF   VAR_ADCX
-	CALL	CONFIGURACION_ADCY  ; LLAMO A LA NUEVA CONFIGURACIÓN PARA QUE LA SIGUIENTE LECTURA SE HAGA EN EL OTRO CANAL
-	BCF	PIR1, ADIF
-	BSF	ADCON0, 1
-	BSF	FLAG_ADC, 0
-    RETURN   
-    ADCY:				
-	MOVFW   ADRESH	    ; MANDA LA CODIFICACION DIGITAL DE MI SEÑAL ANALOGICA A LA VARIABLE EN Y
-	MOVWF   VAR_ADCY
-	CALL	CONFIGURACION_ADCX  ; LLAMO A LA NUEVA CONFIGURACIÓN PARA QUE LA SIGUIENTE LECTURA SE HAGA EN EL OTRO CANAL
-	BCF	PIR1, ADIF
-	BSF	ADCON0, 1
-	BCF	FLAG_ADC, 0
-    RETURN  
-    
-    
-BANDERA_TX: ; ESTA RUTINA MANDA EN ORDEN DE LA SIGUIENTE FORMA x,y\n LO CUAL ES PROCESADO EN PYTHON
-    MOVFW   ROTACION
-    SUBLW   .3
-    BTFSC   STATUS, Z
-    GOTO    ENTER
-    MOVFW   ROTACION
-    SUBLW   .2
-    BTFSC   STATUS, Z
-    GOTO    COORY
-    MOVFW   ROTACION
-    SUBLW   .1
-    BTFSC   STATUS, Z
-    GOTO    COMA
-    COORX:
-	MOVFW   VAR_ADCX
-	MOVWF   TXREG
-	INCF	ROTACION
-    RETURN  
-    
-    COMA:
-	MOVLW   .44			; CÓDIGO ASCII DE LA COMA
-	MOVWF   TXREG
-	INCF	ROTACION
-    RETURN
-    
-    COORY:
-	MOVLW   VAR_ADCY
-	MOVWF   TXREG
-	INCF	ROTACION
-    RETURN
-    
-    ENTER:
-	MOVLW   .10			; CÓDIGO ASCII DEL ENTER
-	MOVWF   TXREG
-	CLRF	ROTACION
-    RETURN
-    
+     
 BANDERA_RX:    
-    BTFSC   FLAG_RC, 0
-    GOTO    RCY
-    RCX:
-	MOVFW   RCREG			; RECIBO LA SEÑAL DEL TX A TRAVÉS DEL RX Y LA MANDO A MI VARIABLE CONECTORA EN X
-	MOVWF   COMUNICACIONX
-	BSF	FLAG_RC, 0
-    RETURN   
-    RCY:				
-	MOVFW   RCREG			; RECIBO LA SEÑAL DEL TX A TRAVÉS DEL RX Y LA MANDO A MI VARIABLE CONECTORA EN Y
-	MOVWF   COMUNICACIONY
-	BCF	FLAG_RC, 0
+    INCF    CUENTARX,1		    
+    MOVFW   RXB4		    
+    MOVWF   RXB5
+    
+    MOVFW   RXB3		    
+    MOVWF   RXB4
+    
+    MOVFW   RXB2		    
+    MOVWF   RXB3	
+    
+    MOVFW   RXB1		    
+    MOVWF   RXB2
+    
+    MOVFW   RXB0		    
+    MOVWF   RXB1
+        
+    MOVFW   RCREG		    
+    MOVWF   RXB0		       
+    
+    XORLW   .10			    
+    BTFSC   STATUS,Z		    
+    GOTO    VERIFICACION
     RETURN
-RETURN    
+    
+    VERIFICACION:  
+	MOVLW   .6			    
+	SUBWF   CUENTARX,W
+	BTFSS   STATUS,Z
+	GOTO    ERRONEO
+
+	MOVLW	.44		
+	SUBWF	RXB3,W
+	BTFSS	STATUS,Z
+	GOTO	ERRONEO
+
+
+	MOVLW   .48		    
+	SUBWF   RXB1,W
+	MOVWF   DISPLAY_HX
+
+	MOVLW   .48		   
+	SUBWF   RXB2,W
+	MOVWF   DISPLAY_LX
+
+	MOVLW   .48		   
+	SUBWF   RXB4,W
+	MOVWF   DISPLAY_HY
+
+	MOVLW   .48		
+	SUBWF   RXB5,W
+	MOVWF   DISPLAY_LY    
+	CLRF	CUENTARX
+	RETURN
+
+    ERRONEO:
+	CLRF    CUENTARX		;Clear al conteo para recibir nuevo mensaje
+	RETURN   
     
 ;*******************************************************************************
 ; TABLA DE DISPLAYS
@@ -186,6 +167,31 @@ TABLA:
     RETLW   b'01101000' ; d
     RETLW   b'00011100' ; E
     RETLW   b'00011110' ; F  
+
+;*******************************************************************************
+; TABLA DE CONVERSIONES
+;*******************************************************************************
+; SE USARA ESTA TABLA PARA REALIZAR LAS CONVERSIONES A ASCII 
+; Y ENVIAR LOS DATOS EN EL FORMATO DESEADO   
+CONVERSIONES:       
+    ANDLW   b'00001111'	
+    ADDWF   PCL, F
+    RETLW   .48		;0 
+    RETLW   .49		;1 
+    RETLW   .50		;2 
+    RETLW   .51		;3 
+    RETLW   .52		;4 
+    RETLW   .53		;5 
+    RETLW   .54		;6 
+    RETLW   .55		;7 
+    RETLW   .56		;8
+    RETLW   .57		;9 
+    RETLW   .65		;A   
+    RETLW   .66		;B   
+    RETLW   .67		;C  
+    RETLW   .68		;D   
+    RETLW   .69		;E  
+    RETLW   .70		;F 
     
 ;*******************************************************************************
 ; MAIN PROGRAM
@@ -197,18 +203,22 @@ START
 SETUP:
     CALL    CONFIGURACION_BASE		    ; EXPLICACIONES EN LA SECCIÓN DE CONFIGURACIONES
     CALL    CONFIGURACION_TIMER0
-    CALL    CONFIGURACION_TIMER2
     CALL    CONFIGURACION_INTERRUPCION
     CALL    CONFIGURACION_ADC
     CALL    CONFIGURACION_TX_9600
     CALL    CONFIGURACION_RX
+    CALL    LIMPIA_VARIABLES
     
 ;*******************************************************************************
 ; MAIN LOOP
 ;*******************************************************************************    
 
 LOOP:
-    GOTO    LOOP			; TODO SE REALIZA CON INTERRUPCIONES, POR LO QUE EL MAIN LOOP ESTÁ VACÍO
+    CALL    CONVERSION_ADC
+    CALL    NIB_SEPX
+    CALL    NIB_SEPY
+    CALL    RUTINA_TX
+    GOTO    LOOP			
     
 ;*******************************************************************************
 ; RUTINA DE DISPLAY
@@ -258,21 +268,112 @@ DISPLAY: ; MUXEO DE LOS DISPLAYS
 	RETURN  
 
 ;*******************************************************************************
+; RUTINA DE CONVERSION ADC
+;*******************************************************************************        
+ 
+CONVERSION_ADC:
+    BANKSEL ADCON0
+    MOVLW   b'10000011'			
+    MOVWF   ADCON0  
+    CALL    DELAY
+   
+    BSF	    ADCON0,GO
+    BTFSC   ADCON0,GO 
+    GOTO    $-1
+    
+    BANKSEL ADRESH
+    MOVFW   ADRESH
+    MOVWF   Y			
+    
+    BANKSEL ADCON0
+    MOVLW   b'10010011'			
+    MOVWF   ADCON0
+    CALL    DELAY
+    BSF	    ADCON0,GO
+    BTFSC   ADCON0,GO 
+    GOTO    $-1
+    
+    BANKSEL ADRESH
+    MOVFW   ADRESH
+    MOVWF   X			
+    RETURN	
+	
+;*******************************************************************************
 ; RUTINA DE SEPARACIÓN DE NIBBLES
 ;*******************************************************************************        
     
 NIB_SEPX:
-    MOVFW   COMUNICACIONX	; COLOCO MI VARIABLE CONECTORA DE COMUNICACION SERIAL EN MIS NIBBLES HIGH Y LOW PARA COLOCARLOS EN EL DISPLAY
-    MOVWF   DISPLAY_LX
-    SWAPF   COMUNICACIONX, W
-    MOVWF   DISPLAY_HX
+    MOVFW   X	; COLOCO MI VARIABLE CONECTORA DE COMUNICACION SERIAL EN MIS NIBBLES HIGH Y LOW PARA COLOCARLOS EN EL DISPLAY
+    MOVWF   XL
+    SWAPF   X, W
+    MOVWF   XH
 RETURN   
 NIB_SEPY:
-    MOVFW   COMUNICACIONY	; COLOCO MI VARIABLE CONECTORA DE COMUNICACION SERIAL EN MIS NIBBLES HIGH Y LOW PARA COLOCARLOS EN EL DISPLAY
-    MOVWF   DISPLAY_LY
-    SWAPF   COMUNICACIONY, W
-    MOVWF   DISPLAY_HY
+    MOVFW   Y		; COLOCO MI VARIABLE CONECTORA DE COMUNICACION SERIAL EN MIS NIBBLES HIGH Y LOW PARA COLOCARLOS EN EL DISPLAY
+    MOVWF   YL
+    SWAPF   Y, W
+    MOVWF   YH
 RETURN
+
+;*******************************************************************************
+; RUTINA ENVIO
+;*******************************************************************************        
+     
+RUTINA_TX:    
+    MOVFW  XH			
+    CALL   CONVERSIONES		
+    MOVWF  TXREG
+    CALL   DELAY_BIG
+    
+    MOVFW  XL			
+    CALL   CONVERSIONES		
+    MOVWF  TXREG
+    CALL   DELAY_BIG
+    
+    MOVLW  .44			
+    MOVWF  TXREG
+    CALL   DELAY_BIG
+    
+    MOVFW  YH			
+    CALL   CONVERSIONES		
+    MOVWF  TXREG
+    CALL   DELAY_BIG
+    
+    MOVFW  YL			
+    CALL   CONVERSIONES		
+    MOVWF  TXREG
+    CALL   DELAY_BIG
+    
+    MOVLW  .10			 
+    MOVWF  TXREG
+    CALL   DELAY_BIG
+    RETURN  
+    
+;*******************************************************************************
+; RUTINA DE DELAYS
+;*******************************************************************************            
+    
+DELAY:
+    MOVLW   .23			    
+    MOVWF   CONT1
+    DECFSZ  CONT1, F
+    GOTO    $-1                       
+RETURN    
+  
+DELAY_BIG:
+    MOVLW   .255			    
+    MOVWF   CONT1
+    DECFSZ  CONT1, F
+    GOTO    $-1                       
+    MOVLW   .255			    
+    MOVWF   CONT1
+    DECFSZ  CONT1, F
+    GOTO    $-1                       
+    MOVLW   .255			  
+    MOVWF   CONT1
+    DECFSZ  CONT1, F
+    GOTO    $-1                       
+RETURN        
     
 ;*******************************************************************************
 ; CONFIGURACIONES
@@ -301,20 +402,7 @@ CONFIGURACION_BASE:
     CLRF    TRISD		; PARA DISPLAY
     
     CLRF    TRISE
-    
-    BANKSEL PORTA		; IMPORTANTE REGRESAR SIEMPRE AL BANCO 0 Y LIMPIAR TODAS MIS VARIABLES
-    CLRF    FLAG
-    CLRF    FLAG_ADC
-    CLRF    FLAG_RC
-    CLRF    ROTACION
-    CLRF    COMUNICACIONX
-    CLRF    COMUNICACIONY
-    CLRF    VAR_ADCX  
-    CLRF    VAR_ADCY  
-    CLRF    DISPLAY_LY
-    CLRF    DISPLAY_LX
-    CLRF    DISPLAY_HY
-    CLRF    DISPLAY_HX
+    BANKSEL PORTA
 RETURN
     
 CONFIGURACION_TIMER0:
@@ -324,22 +412,12 @@ CONFIGURACION_TIMER0:
     MOVWF   OPTION_REG 
     BANKSEL PORTA
 RETURN
-    
-CONFIGURACION_TIMER2:
-    BANKSEL PORTA
-    MOVLW   b'11111111'		; CONFIGURACIÓN PARA EL FUNCIONAMIENTO DEL TIMER2	
-    MOVWF   T2CON    
-RETURN
-    
+   
 CONFIGURACION_INTERRUPCION:
     BANKSEL TRISA
-    BSF	    PIE1, TMR2IE	; HABILITA INTERRUPCION DEL TIMER2
-    BSF	    PIE1, ADIE		; HABILITA INTERRUPCION DEL ADC
     BSF	    PIE1, RCIE		; HABILITA INTERRUPCION DE RECEPCION SERIAL CON RX
     BSF	    INTCON, PEIE	; INTERRUPCIONES PERIFÉRICAS -TIMER 2 Y ADC-
     BSF	    INTCON, T0IE	; HABILITA INTERRUPCION DEL TIMER0
-    MOVLW   .20			; CONFIGURACIÓN DEL TIMER2 PARA 5ms
-    MOVWF   PR2
     
     BANKSEL PORTA
     BSF	    INTCON, GIE		; HABILITA LAS INTERRUPCIONES
@@ -358,16 +436,6 @@ CONFIGURACION_ADC:
     BCF	    ADCON0, 5
     BCF	    ADCON0, 6
     BSF	    ADCON0, 7   
-RETURN
-
-CONFIGURACION_ADCX:
-    BANKSEL ADCON0 
-    BCF	    ADCON0, 4		; PARA CANAL 0
-RETURN
-    
-CONFIGURACION_ADCY:    
-    BANKSEL ADCON0 
-    BSF	    ADCON0, 4		; PARA CANAL 4
 RETURN
     
 CONFIGURACION_TX_9600:
@@ -393,9 +461,15 @@ CONFIGURACION_RX:
     BCF	    RCSTA, RX9
     BSF	    RCSTA, CREN
 RETURN
-    
-    
-;*******************************************************************************
 
-    
+LIMPIA_VARIABLES:
+    BANKSEL PORTA
+    CLRF    CUENTARX
+    CLRF    ADRESH
+    CLRF    X
+    CLRF    Y
+    CLRF    CONT1
+RETURN
+;*******************************************************************************
+ 
     END
